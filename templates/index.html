@@ -2,10 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='reset.css') }}"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="{{ url_for('static', filename='materialize.css') }}"
+      media="screen,projection"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Monitoramento</title>
   </head>
   <body>
+    <h1>Monitoramento</h1>
     <p>Bem vindo a página de Monitoramento!</p>
+    <p>Hostname: {{computador.nome}}</p>
+    <p>Memória Total: {{computador.memoria_total}}</p>
+    <p>Memória Em Uso: {{computador.memoria_em_uso}}</p>
+    <p>Memória Disponível: {{computador.memoria_disponivel}}</p>
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename='materialize.js') }}"
+    ></script>
   </body>
 </html>
