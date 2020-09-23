@@ -23,10 +23,10 @@ memoria_disponivel = get_size(svmem.available)
 computador = Computador(nome, memoria_total,
                         memoria_em_uso, memoria_disponivel)
 
-app = Flask(__name__)
-
-
 computador_dicionario = computador.__dict__
+
+
+app = Flask(__name__)
 
 
 @app.route('/')
